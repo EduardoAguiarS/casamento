@@ -6,13 +6,14 @@
   <title>Nicaele & José Eduardo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #fdfaf5;
+      background-color: #f8f9fa;
       color: #333;
+      line-height: 1.6;
     }
     header {
       text-align: center;
@@ -34,38 +35,167 @@
     }
     header h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       z-index: 1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin: 0;
     }
 
     main {
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    section.info {
-      margin-bottom: 20px;
+    section {
+      margin-bottom: 50px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-    section.info h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+    section:hover {
+      transform: translateY(-5px);
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #1a237e;
+      font-family: 'Great Vibes', cursive;
+      font-weight: normal;
     }
     section.info ul {
       list-style: none;
       padding: 0;
+      font-size: 1.2rem;
     }
     section.info li {
-      margin-bottom: 5px;
+      margin-bottom: 15px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    section.info li:last-child {
+      border-bottom: none;
     }
     section.info strong {
-      font-weight: bold;
+      font-weight: 500;
+      color: #1a237e;
     }
-
-    section.biblia {
+    
+    .bible-text {
       font-style: italic;
-      background-color: bisque;
-      padding: 10px;
+      line-height: 1.8;
+      margin: 30px 0;
+      padding: 25px;
+      background-color: #f5f8ff;
+      border-left: 5px solid #1a237e;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-align: center;
     }
-
+    
+    .bible-verse {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 15px;
+      color: #1a237e;
+      font-style: normal;
+    }
+    
+    .gift-option {
+      border: 2px solid #e0e5ff;
+      padding: 25px;
+      margin: 25px 0;
+      border-radius: 10px;
+      text-align: left;
+      background-color: #fafbff;
+    }
+    
+    .gift-option h3 {
+      margin-top: 0;
+      color: #1a237e;
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-bottom: 2px solid #e0e5ff;
+      padding-bottom: 10px;
+    }
+    
+    .pix-info {
+      background-color: #f0f4ff;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 25px 0;
+      border: 2px dashed #1a237e;
+    }
+    
+    .pix-key {
+      font-weight: bold;
+      word-break: break-all;
+      color: #1a237e;
+      font-size: 1.2rem;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 10px 0;
+      border: 1px solid #d0d9ff;
+    }
+    
+    .gift-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .gift-item {
+      border: 1px solid #e0e5ff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .gift-item:hover {
+      transform: scale(1.03);
+    }
+    
+    .gift-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .gift-details {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .gift-name {
+      font-weight: 500;
+      color: #1a237e;
+      margin: 10px 0;
+    }
+    
+    .gift-price {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+      section {
+        padding: 20px;
+      }
+      section h2 {
+        font-size: 2rem;
+      }
+      .gift-list {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -74,12 +204,100 @@
   </header>
   <main>
     <section class="info">
-      <h2>Informações da Cerimonia</h2>
+      <h2>Informações da Cerimônia</h2>
       <ul>
-        <li><strong>Local:</strong> Paroquia Santo Antonio de Lisboa - Presidente Venceslau</li>
+        <li><strong>Local:</strong> Paróquia Santo Antônio de Lisboa - Presidente Venceslau</li>
         <li><strong>Data:</strong> 20 de Novembro de 2026</li>
         <li><strong>Hora:</strong> A Definir</li>
       </ul>
+    </section>
+    
+    <section class="bible-section">
+      <h2>Palavra sobre o Casamento</h2>
+      <div class="bible-text">
+        "Portanto, deixará o homem a seu pai e a sua mãe e se unirá à sua mulher, e os dois serão uma só carne."
+        <div class="bible-verse">Gênesis 2:24</div>
+      </div>
+      
+      <div class="bible-text">
+        "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta. O amor nunca perece."
+        <div class="bible-verse">1 Coríntios 13:4-8</div>
+      </div>
+      
+      <div class="bible-text">
+        "Melhor é serem dois do que um, porque têm melhor paga do seu trabalho. Porque se um cair, o outro levanta o seu companheiro; mas ai do que estiver só; pois, caindo, não haverá outro que o levante."
+        <div class="bible-verse">Eclesiastes 4:9-10</div>
+      </div>
+    </section>
+    
+    <section class="pix-section">
+      <h2>Presentes em Dinheiro (PIX)</h2>
+      <p style="font-size: 1.2rem;">Se preferir nos presentear com valores em dinheiro, ficaremos muito gratos!</p>
+      
+      <div class="pix-info">
+        <h3 style="margin-top: 0;">Chave PIX</h3>
+        <p>Utilize a seguinte chave PIX para nos presentear:</p>
+        <p><strong>Tipo:</strong> Celular</p>
+        <p class="pix-key">(18) 99142-6322</p>
+        <p><strong>Nome:</strong> Nicaele & José Eduardo</p>
+      </div>
+      
+      <p style="font-size: 1.1rem; color: #1a237e;">Muito obrigado por contribuir para o início da nossa vida a dois!</p>
+    </section>
+    
+    <section class="gifts-section">
+      <h2>Lista de Presentes</h2>
+      <p style="font-size: 1.2rem;">Se desejar nos presentear, aqui estão algumas sugestões:</p>
+      
+      <div class="gift-list">
+        <div class="gift-item">
+          <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Jogo de cama" class="gift-image">
+          <div class="gift-details">
+            <div class="gift-name">Jogo de Cama Queen Size</div>
+            <div class="gift-price">R$ 350,00 - R$ 600,00</div>
+          </div>
+        </div>
+        
+        <div class="gift-item">
+          <img src="https://images.unsplash.com/photo-1583778176476-4a8b02b64e1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Conjunto de panelas" class="gift-image">
+          <div class="gift-details">
+            <div class="gift-name">Conjunto de Panelas Inox</div>
+            <div class="gift-price">R$ 450,00 - R$ 800,00</div>
+          </div>
+        </div>
+        
+        <div class="gift-item">
+          <img src="https://images.unsplash.com/photo-1615551043360-33de8b5f410a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Air Fryer" class="gift-image">
+          <div class="gift-details">
+            <div class="gift-name">Air Fryer 5L</div>
+            <div class="gift-price">R$ 600,00 - R$ 900,00</div>
+          </div>
+        </div>
+        
+        <div class="gift-item">
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Jogo de jantar" class="gift-image">
+          <div class="gift-details">
+            <div class="gift-name">Jogo de Jantar Completo</div>
+            <div class="gift-price">R$ 800,00 - R$ 1.500,00</div>
+          </div>
+        </div>
+        
+        <div class="gift-item">
+          <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Liquidificador" class="gift-image">
+          <div class="gift-details">
+            <div class="gift-name">Liquidificador Potente</div>
+            <div class="gift-price">R$ 250,00 - R$ 500,00</div>
+          </div>
+        </div>
+        
+        <div class="gift-item">
+          <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Jogo de toalhas" class="gift-image">
+          <div class="gift-details">
+            <div class="gift-name">Jogo de Toalhas Banho</div>
+            <div class="gift-price">R$ 200,00 - R$ 400,00</div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </body>
